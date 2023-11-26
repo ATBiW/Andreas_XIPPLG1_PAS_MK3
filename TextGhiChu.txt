@@ -1,0 +1,86 @@
+Matriks permainannya adalah 30x20
+Makan 20 apel untuk melewati level tersebut.
+Ada 6 level.
+(Ada bilah gulir untuk mengubah kecepatan bermain ular.)
+Ada tombol suara. off akan mematikan suara, on akan menghidupkan suara.
+Ada tombol instal. Saat ditekan, tombol pengaturan ini akan menampilkan kartu div dengan efek sebagai berikut: Ubah kecepatan ular, layar baru, lanjutkan, setel ulang, layar utama
+Level 1: Tanpa tembok, menangkan 20 apel. Selesai!
+Level 2: Ada tembok, jika kamu makan 20 apel kamu menang. Selesai!
+Level 3: Ada tembok tapi sederhana, makan 20 apel dalam jangka waktu tertentu, jika tidak punya waktu, Anda kalah. Selesai!
+Level 4: Ada tembok, ular harus memakan apel dalam jangka waktu tertentu, jika tidak maka ular akan lapar dan kalah. Peta akan menjadi lebih rumit dan sulit dinavigasi. Selesai!
+Level 5: Selama jangka waktu tertentu, ular harus menyelesaikan 1 tugas level tersebut (memakan 2 sesuatu), Waktu menghitung mundur. harus makan 2 apel
+item baru muncul. Selesai!
+Level 6: Ada langkah dinding, Anda harus makan 20 apel, (saat Anda lapar...), waktu hitung mundur, makan item.
++ makan 10 apel
++makan item
++ waktu hitung mundur kelaparan
++ waktu permainan
++peta lebih sulit
+Saat Anda makan 10 apel: Anda akan membuka gerbang kemenangan, tetapi jika Anda tidak memiliki cukup item, Anda akan kalah.
+Selesai!
+
+waktu pembuatan tombol:
+-pengaturan:
+mengatur tajuk
+settingDiv, overlay : blok (tampilkan div pengaturan)
++ Interval yang jelas
++untuk variabel iterval = null
++isDraw = false (untuk tidak melanjutkan menggambar)
+<Tombol berikutnya Level6 akan dinonaktifkan>
+<Saat tombol win continue akan dinonaktifkan>
+
+-tiếp tục:
+settingDiv, overlay : tidak ada (sembunyikan div pengaturan)
+isDraw = true (untuk melanjutkan ke kanvas)
+awal()
+
+-tingkat berikutnya:
+settingDiv, overlay : tidak ada (sembunyikan div pengaturan)
+timeFruitsLabel(tersembunyi, jika masih ada waktu yang ditampilkan melalui layar)
+isDraw = true (kondisi gambar)
+continueButton dinonaktifkan=false (karena jika Anda memenangkan permainan melalui layar baru, atur lanjutkan lagi)
+level 2 hingga 3: menampilkan waktu permainan (labeltimegame : inline)
+level 3 hingga 4: sembunyikan waktu permainan, tampilkan waktu hidup ular (labeltimegame:none, timeContainer: inline)
+level 4 hingga 5: sembunyikan masa hidup ular (timeContainer:none)
+level 5 hingga 6: menampilkan skor lagi (skor: sebaris)
+
+Fungsi mulai: waktu 3210 untuk memulai permainan{
+gunakan setInterval dari variabel countIntervalId.
+gunakan hitungan waktu, 3-2-1-0
+Jika hitungan = 0, hapus countIntervalId, perbarui hitungan=3 (untuk digunakan nanti)
+mulai fungsi gameLoop()
+}
+
+Fungsi draw(): Matriks Ve, dijalankan, lalu,...
+
+Fungsi gameLoop(): operasi permainan{
+Gunakan variabel isDraw untuk mengoperasikan game. if(true) continue(timeout=setTimeout untuk melanjutkan permainan) else stop;
+Gunakan fungsi draw() untuk mengisi kanvas
+}
+Fungsi countDown(): Mengukur waktu permainan
+
+
+Ada 5 div yang ditampilkan:
+1. Jumlah apel - skor
+2. Waktu permainan - labelwaktupermainan
+3. Waktu kelaparan ular - wadah waktu
+4. Item - labelBuah
+5. Item waktu - waktuBuahLabel
+
+~Membuat tingkat tampilan teks{
++level judul: saat bergabung, boardgame akan muncul
++kembali ke halaman beranda akan disembunyikan.
+} Selesai!
+~Buat label yang menampilkan aturan pada level tersebut\ selesai!
+
+
+
+
+
+Durasi item: dikurangi menjadi 7 detik
+kecepatan: 100, 90, 80, 70, 60 -> 5 kecepatan
+x milik {1 2 3 4 5}
+rumusnya kecepatan = 110-x*10; Oke
+Selesai!
+
+suara game over, game menang
